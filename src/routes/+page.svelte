@@ -17,7 +17,7 @@
 
 {#if loggedIn}
 <div class="bg-dark text-white p-4 flex justify-between items-center">
-    <h3 class="font-semibold">Commune.</h3>
+    <h3 class="font-semibold">Dev Commune.</h3>
     <button id="avatar" class="bg-red text-white w-6 h-6 rounded-full ">
         {data.account?.name.charAt(0)}
     </button>
