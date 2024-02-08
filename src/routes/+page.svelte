@@ -13,22 +13,21 @@
 		// In our case, this means we'll fetch the account data again.
 		await invalidateAll();
 	}
+	let modal = false;
 </script>
 
 {#if loggedIn}
-	<div class="bg-dark text-white p-4 flex justify-between">
-		<!-- <p>Hello {data.account?.name}!</p> -->
+	<div class="bg-dark text-white p-4 flex justify-between items-center">
 		<h3 class="font-semibold">Commune.</h3>
-		<button on:click={logout}>Logout</button>
+		<button on:click={logout} class="bg-red text-white w-6 h-6 rounded-full ">
+			{data.account?.name.charAt(0)}
+		</button>
 	</div>
 {:else}
 	
 	<div class="bg-dark text-white p-4 flex justify-between">
-		<!-- <p>Hello {data.account?.name}!</p> -->
 		<h3 class="font-semibold">Commune.</h3>
-		<div>
-			<a href="/login" class="pr-4">Login</a>
-			<a href="/signup">Signup</a>
-		</div>
+		<a href="/login" class="">Login</a>
+		
 	</div>
 {/if}

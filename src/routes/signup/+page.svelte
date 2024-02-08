@@ -35,7 +35,7 @@
 	}
 </script>
 
-<div class="flex justify-center items-center bg-dark min-h-screen p-4">
+<div class="flex justify-center items-center bg-dark min-h-screen px-4">
 	<form on:submit={handleSubmit} class="flex flex-col bg-white text-black p-8 rounded-3xl sm:max-w-sm w-full">
 
 		<h3 class="text-xl font-semibold">Signup</h3>
