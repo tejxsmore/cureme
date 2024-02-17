@@ -35,8 +35,8 @@
 	}
 </script>
 
-<div class="flex justify-center items-center bg-red min-h-screen px-8">
-	<form on:submit={handleSubmit} class="flex flex-col bg-white text-black p-8 rounded-3xl sm:max-w-sm w-full">
+<div class="flex justify-center items-center bg-red min-h-screen px-6">
+	<form on:submit={handleSubmit} class="flex flex-col bg-white text-black p-6 rounded-3xl sm:max-w-sm w-full">
 
 		<h3 class="text-xl font-bold">Signup</h3>
 		<p class="text-sm font-normal text-black pb-6">to register to Commune</p>

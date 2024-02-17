@@ -5,22 +5,17 @@
 
     let mapElement;
     onMount(() => {
-            navigator.geolocation.getCurrentPosition((position) => {
-            let longitude = position.coords.longitude;
-            let latitude = position.coords.latitude; 
-
-            let map = tt.map({
-                key: "SOP3mR53bh1z6cBmklQHEAkWB6cAnrCR",
-                container: mapElement,
-                stylesVisibility: {
+        let map = tt.map({
+            key: "SOP3mR53bh1z6cBmklQHEAkWB6cAnrCR",
+            container: mapElement,
+            stylesVisibility: {
                 trafficIncidents: true,
                 trafficFlow: true
-                },
-                center: [longitude, latitude ],
-                zoom: 15
-            });
-        })
-    });
+            },
+            center: [72.877426, 19.076090 ],
+            zoom: 15
+        });
+    })
 </script>
 
-<div bind:this={mapElement} class="w-full h-96 rounded-lg border-gray-300 border"></div>
+<div bind:this={mapElement} class="w-full h-96 pb-6 rounded-lg border-gray-300 border"></div>
