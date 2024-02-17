@@ -35,23 +35,23 @@
 
 <div class="flex justify-center items-center bg-dark min-h-screen px-4">
 	<form on:submit={handleSubmit} class="flex flex-col bg-white text-black p-8 rounded-3xl sm:max-w-sm w-full">
-		<h3 class="text-xl font-semibold">Login</h3>
-		<p class="font-light text-black pb-6">to continue to Commune</p>
+		<h3 class="text-xl font-bold">Login</h3>
+		<p class="text-sm font-normal pb-6">to continue to Commune</p>
 		
-		<label  for="email" class="font-normal pb-2">Email</label>
-		<input type="email" id="email" name="email" required class="focus:outline-none p-2 mb-6 w-full font-normal rounded-lg border-[1px] border-grey" />
+		<label  for="email" class="text-sm font-normal pb-2">Email</label>
+		<input type="email" id="email" name="email" required class="focus:outline-none p-2 mb-6 w-full font-normal rounded-lg border" />
 		
-		<label  for="password" class="font-normal pb-2">Password</label>
+		<label  for="password" class="text-sm font-normal pb-2">Password</label>
 		<input
 			type="password"
 			id="password"
 			name="password"
 			required
 			minlength="8"
-			class="focus:outline-none p-2 mb-3 w-full font-normal rounded-lg border-[1px] border-grey"
+			class="focus:outline-none p-2 mb-3 w-full font-normal rounded-lg border"
 		/>
-		<button type="submit" class="bg-red text-white font-semibold p-2 rounded-lg border-[1px] border-red hover:bg-rose-600 mb-6">Login</button>
-		<p class="text-md font-light">Don't have an account? <a href="/signup" class="font-semibold">Signup</a></p>
+		<button type="submit" class="bg-red text-white text-md font-medium p-2 rounded-lg border border-red hover:opacity-90 mb-6">Login</button>
+		<p class="text-md font-light">Don't have an account? <a href="/signup" class="text-md font-medium">Signup</a></p>
 		{#if formError}
 			<p class="text-md font-semibold">{formError}</p>
 		{/if}

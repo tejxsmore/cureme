@@ -2,6 +2,7 @@
     import { invalidateAll } from '$app/navigation';
 	import { appwrite } from "$lib/appwrite"
     import { Dropdown, DropdownItem} from 'flowbite-svelte';
+    import Intro from '../components/Intro.svelte';
 
     export let data;
 	$: loggedIn = !!data.account;
@@ -16,30 +17,31 @@
 </script>
 
 {#if loggedIn}
-<div class="bg-dark text-white p-4 flex justify-between items-center">
-    <h3 class="font-semibold">Dev Commune.</h3>
-    <button id="avatar" class="bg-red text-white w-6 h-6 rounded-full ">
-        {data.account?.name.charAt(0)}
-    </button>
-    <Dropdown
-        class="text-center text-black p-2 w-[150px] space-y-2 rounded-lg"
-        frameClass="rounded-lg"
-        placement="bottom"
-        triggeredBy="#avatar"
-    >
-        <DropdownItem class="font-semibold" href="/profile" >
-            Profile
-        </DropdownItem>
-        <hr>
-        <DropdownItem class="text-red font-semibold" on:click={logout}>
-            Signout
-        </DropdownItem>
-    </Dropdown> 
+    <div class="bg-dark text-white p-4 flex justify-between items-center">
+        <h3 class="font-semibold">Dev Commune.</h3>
+        <button id="avatar" class="bg-red text-white w-6 h-6 rounded-full ">
+            {data.account?.name.charAt(0)}
+        </button>
+        <Dropdown
+            class="text-center text-black p-2 w-[150px] space-y-2 rounded-lg"
+            frameClass="rounded-lg"
+            placement="bottom"
+            triggeredBy="#avatar"
+        >
+            <DropdownItem class="font-semibold" href="/profile" >
+                Profile
+            </DropdownItem>
+            <hr>
+            <DropdownItem class="text-red font-semibold" on:click={logout}>
+                Signout
+            </DropdownItem>
+        </Dropdown> 
     </div>
 {:else}
-	
-	<div class="bg-dark text-white p-4 flex justify-between">
+	<div class="bg-blue text-white p-4 flex justify-between">
 		<h3 class="font-semibold">Dev Commune.</h3>
 		<a href="/login" class="">Login</a>
 	</div>
+    <Intro />
+
 {/if}
