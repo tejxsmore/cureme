@@ -35,13 +35,13 @@
 	}
 </script>
 
-<div class="flex justify-center items-center bg-dark min-h-screen px-4">
+<div class="flex justify-center items-center bg-red min-h-screen px-8">
 	<form on:submit={handleSubmit} class="flex flex-col bg-white text-black p-8 rounded-3xl sm:max-w-sm w-full">
 
 		<h3 class="text-xl font-bold">Signup</h3>
 		<p class="text-sm font-normal text-black pb-6">to register to Commune</p>
 
-		<label for="name" class="font-normal pb-2">Name</label>
+		<label for="name" class="text-sm font-normal pb-2">Name</label>
 		<input type="text" id="name" name="name" required class="focus:outline-none p-2 mb-6 w-full text-sm font-normal rounded-lg border-[1px] border-grey" />
 
 		<label for="email" class="text-sm font-normal pb-2">Email</label>

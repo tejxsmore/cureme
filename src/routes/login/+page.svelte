@@ -33,8 +33,8 @@
 	}
 </script>
 
-<div class="flex justify-center items-center bg-dark min-h-screen px-4">
-	<form on:submit={handleSubmit} class="flex flex-col bg-white text-black p-8 rounded-3xl sm:max-w-sm w-full">
+<div class="flex justify-center items-center min-h-screen bg-red px-8">
+	<form on:submit={handleSubmit} class="flex flex-col bg-white text-black p-8 rounded-3xl sm:max-w-sm w-full border">
 		<h3 class="text-xl font-bold">Login</h3>
 		<p class="text-sm font-normal pb-6">to continue to Commune</p>
 		
