@@ -17,14 +17,16 @@
 
 {#if loggedIn}
 <div class="flex flex-col">
-    <div class="bg-dark text-white p-4 flex justify-between items-center">
-        <h3 class="font-semibold">Dev Commune.</h3>
-        <button id="avatar" class="bg-red text-white w-6 h-6 rounded-full ">
+    <div class="bg-dark text-light p-6 flex justify-between items-center">
+        <a href="/" class="text-lg font-semibold text-light hover:opacity-85">
+            PIN
+        </a>
+        <button id="avatar" class="bg-blue text-dark w-8 h-8 rounded-full ">
             {data.account?.name.charAt(0)}
         </button>
         <Dropdown
-            class="text-center text-black p-2 w-[150px] space-y-2 rounded-lg"
-            frameClass="rounded-lg"
+            class="bg-white text-center text-dark p-2 z-50 w-[150px] space-y-2 rounded-lg"
+            frameClass="rounded-sm"
             placement="bottom"
             triggeredBy="#avatar"
         >
@@ -32,19 +34,20 @@
                 Profile
             </DropdownItem>
             <hr>
-            <DropdownItem class="text-red font-semibold" on:click={logout}>
+            <DropdownItem class="font-semibold" on:click={logout}>
                 Signout
             </DropdownItem>
         </Dropdown> 
     </div>
-    <div class="p-4 bg-dark text-white">
+    <div class="p-4 bg-dark text-white min-h-screen">
         <p>Name : {data.account?.name}</p>
     </div>
 </div>
 {:else}
-	
-	<div class="bg-dark text-white p-4 flex justify-between">
-		<h3 class="font-semibold">Dev Commune.</h3>
-		<a href="/login" class="">Login</a>
-	</div>
+    <div class="bg-dark text-light p-6 flex justify-between">
+        <a href="/" class="text-lg font-semibold text-light hover:opacity-85">
+            PIN
+        </a>
+        <a href="/login" class="px-5 py-1.5 bg-blue text-dark hover:opacity-85 text-md font-medium rounded-sm">Login</a>
+    </div>
 {/if}
