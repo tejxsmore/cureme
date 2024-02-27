@@ -18,4 +18,4 @@
     })
 </script>
 
-<div bind:this={mapElement} class="w-full h-96 pb-6 rounded-lg border-gray-300 border"></div>
+<div bind:this={mapElement} class="w-full h-96 z-10"></div>

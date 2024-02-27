@@ -17,19 +17,16 @@
 </script>
 
 {#if loggedIn}
-    <div class="text-white p-6 flex justify-between items-center">
-        <h3 class="text-lg font-semibold text-red flex">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-9">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-            </svg>
-        </h3>
-        <button id="avatar" class="bg-red text-white w-8 h-8 rounded-full ">
+    <div class="bg-dark text-light p-6 flex justify-between items-center">
+        <a href="/" class="text-lg font-semibold text-light hover:opacity-85">
+            PIN
+        </a>
+        <button id="avatar" class="bg-blue text-dark w-8 h-8 rounded-full ">
             {data.account?.name.charAt(0)}
         </button>
         <Dropdown
-            class="text-center text-white p-2 w-[150px] space-y-2 rounded-lg"
-            frameClass="rounded-lg"
+            class="bg-white text-center text-dark p-2 z-50 w-[150px] space-y-2 rounded-lg"
+            frameClass="rounded-sm"
             placement="bottom"
             triggeredBy="#avatar"
         >
@@ -37,21 +34,18 @@
                 Profile
             </DropdownItem>
             <hr>
-            <DropdownItem class="text-red font-semibold" on:click={logout}>
+            <DropdownItem class="font-semibold" on:click={logout}>
                 Signout
             </DropdownItem>
         </Dropdown> 
     </div>
     <Home />
 {:else}
-	<div class="text-white p-6 flex justify-between">
-		<a href="/" class="text-lg font-semibold text-red hover:opacity-75">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-9">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-            </svg>
+	<div class="bg-dark text-light p-6 flex justify-between">
+		<a href="/" class="text-lg font-semibold text-light hover:opacity-85">
+            PIN
         </a>
-		<a href="/login" class="px-3 py-1.5 bg-red hover:opacity-75 rounded-lg text-md font-medium">Login</a>
+		<a href="/login" class="px-5 py-1.5 bg-blue text-dark hover:opacity-85 text-md font-medium rounded-sm">Login</a>
 	</div>
     <Home />
 
