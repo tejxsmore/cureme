@@ -33,24 +33,28 @@
 	}
 </script>
 
-<div class="flex justify-center items-center min-h-screen bg-dark px-6">
-	<form on:submit={handleSubmit} class="flex flex-col bg-white text-dark p-6 rounded-sm sm:max-w-sm w-full border">
-		<h3 class="text-xl font-bold">Login</h3>
-		<p class="text-sm font-normal pb-6">to continue to Commune</p>
+<div class="flex justify-center items-center min-h-screen bg-light px-5">
+	<form on:submit={handleSubmit} class="flex flex-col bg-white text-dark p-5 rounded-md sm:max-w-sm w-full border border-gray">
+		<a href="/" >
+			<img src="/logo.png" alt="logo" class="w-7 h-7 mb-5">
+		</a>
+
+		<h3 class="text-xl font-bold pb-1">Login</h3>
+		<p class="text-sm font-normal pb-5">to continue to Cure Me</p>
 		
-		<label  for="email" class="text-sm font-normal pb-3">Email</label>
-		<input type="email" id="email" name="email" required class="focus:outline-none p-2 mb-6 w-full font-normal rounded-sm border" />
+		<label  for="email" class="text-sm font-normal pb-2.5">Email</label>
+		<input type="email" id="email" name="email" required class="focus:outline-none p-2 mb-5 w-full text-sm font-normal rounded-md border border-gray" />
 		
-		<label  for="password" class="text-sm font-normal pb-3">Password</label>
+		<label  for="password" class="text-sm font-normal pb-2.5">Password</label>
 		<input
 			type="password"
 			id="password"
 			name="password"
 			required
 			minlength="8"
-			class="focus:outline-none p-2 mb-3 w-full font-normal rounded-sm border"
+			class="focus:outline-none p-2 mb-5 w-full text-sm font-normal rounded-md border border-gray"
 		/>
-		<button type="submit" class="bg-blue text-dark text-md font-medium p-2 rounded-sm hover:opacity-90 mb-6">Login</button>
+		<button type="submit" class="p-2 mb-5 w-full text-md font-medium rounded-md bg-red text-white">Login</button>
 		<p class="text-md font-normal">Don't have an account? <a href="/signup" class="text-md font-medium">Signup</a></p>
 		{#if formError}
 			<p class="text-md font-medium">{formError}</p>

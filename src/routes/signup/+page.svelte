@@ -35,28 +35,31 @@
 	}
 </script>
 
-<div class="flex justify-center items-center bg-dark min-h-screen px-6">
-	<form on:submit={handleSubmit} class="flex flex-col bg-white text-black p-6 rounded-sm sm:max-w-sm w-full">
+<div class="flex justify-center items-center min-h-screen bg-light px-5">
+	<form on:submit={handleSubmit} class="flex flex-col bg-white text-dark p-5 rounded-md sm:max-w-sm w-full border border-gray">
+		<a href="/" >
+			<img src="/logo.png" alt="logo" class="w-7 h-7 mb-5">
+		</a>
 
-		<h3 class="text-xl font-bold">Signup</h3>
-		<p class="text-sm font-normal text-black pb-6">to register to Commune</p>
+		<h3 class="text-xl font-bold pb-1">Signup</h3>
+		<p class="text-sm font-normal pb-5">to register to Cure Me</p>
 
-		<label for="name" class="text-sm font-normal pb-3">Name</label>
-		<input type="text" id="name" name="name" required class="focus:outline-none p-2 mb-6 w-full text-sm font-normal rounded-sm border-[1px] border-grey" />
+		<label for="name" class="text-sm font-normal pb-2.5">Name</label>
+		<input type="text" id="name" name="name" required class="focus:outline-none p-2 mb-5 w-full text-sm font-normal rounded-md border border-gray" />
 
-		<label for="email" class="text-sm font-normal pb-3">Email</label>
-		<input type="email" id="email" name="email" required class="focus:outline-none p-2 mb-6 w-full text-sm font-normal rounded-sm border-[1px] border-grey" />
+		<label for="email" class="text-sm font-normal pb-2.5">Email</label>
+		<input type="email" id="email" name="email" required class="focus:outline-none p-2 mb-5 w-full text-sm font-normal rounded-md border border-gray" />
 
-		<label for="password" class="text-sm font-normal pb-3">Password</label>
+		<label for="password" class="text-sm font-normal pb-2.5">Password</label>
 		<input
 			type="password"
 			id="password"
 			name="password"
 			required
 			minlength="8"
-			class="focus:outline-none p-2 mb-3 w-full font-normal rounded-sm border"
+			class="focus:outline-none p-2 mb-5 w-full text-sm font-normal rounded-md border border-gray"
 		/>
-		<button type="submit" class="bg-blue text-dark text-md font-medium p-2 rounded-sm hover:opacity-90 mb-6 ">Signup</button>
+		<button type="submit" class="p-2 mb-5 w-full text-md font-medium rounded-md bg-red text-white">Signup</button>
 		<p class="text-md font-normal">Already have an account? <a href="/login" class="text-md font-medium">Login</a></p>
 		{#if formError}
 			<p class="text-md font-medium">{formError}</p>

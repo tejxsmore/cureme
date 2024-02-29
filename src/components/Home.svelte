@@ -1,8 +1,7 @@
 <script>
-    import Map from "./Map.svelte";
+    import About from "./About.svelte";
 </script>
 
-<div class="bg-dark text-light z-10 pb-6 min-h-screen">
-    <h3 class="text-md font-medium p-6">My location </h3>
-    <Map />
+<div class="bg-light text-dark z-10 min-h-screen">
+    <About/>
 </div>
