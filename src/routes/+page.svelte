@@ -23,7 +23,7 @@
                 <img src="/logo.png" alt="logo" class="w-7 h-7">
             </a>
             <a href="/ambulance">
-                <img src="/ambulance.png" alt="Ambulance" class="w-8 h-8">
+                <img src="/ambulance.png" alt="Ambulance" class="w-12 h-12">
             </a>
         </div>
         <button id="avatar" class="bg-red text-white w-8 h-8 font-semibold rounded-full ">
@@ -47,8 +47,14 @@
     <Home />
 {:else}
 	<div class="bg-light text-dark p-5 flex justify-between items-center">
-		<a href="/">
-            <img src="/logo.png" alt="logo" class="w-7 h-7"></a>
+		<div class="flex items-center space-x-5 bg-light text-dark">
+            <a href="/">
+                <img src="/logo.png" alt="logo" class="w-7 h-7">
+            </a>
+            <a href="/ambulance">
+                <img src="/ambulance.png" alt="Ambulance" class="w-12 h-12">
+            </a>
+        </div>
         <a href="/signin" class="px-5 py-1.5 bg-red text-white text-md font-medium rounded-md">Signin</a>
 	</div>
     <Home />
