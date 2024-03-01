@@ -39,8 +39,7 @@
 			<img src="/logo.png" alt="logo" class="w-7 h-7 mb-5">
 		</a>
 
-		<h3 class="text-xl font-bold pb-1">Login</h3>
-		<p class="text-sm font-normal pb-5">to continue to Cure Me</p>
+		<h3 class="text-xl font-bold pb-5">Signin </h3>
 		
 		<label  for="email" class="text-sm font-normal pb-2.5">Email</label>
 		<input type="email" id="email" name="email" required class="focus:outline-none p-2 mb-5 w-full text-sm font-normal rounded-md border border-gray" />
@@ -54,7 +53,7 @@
 			minlength="8"
 			class="focus:outline-none p-2 mb-5 w-full text-sm font-normal rounded-md border border-gray"
 		/>
-		<button type="submit" class="p-2 mb-5 w-full text-md font-medium rounded-md bg-red text-white">Login</button>
+		<button type="submit" class="p-2 mb-5 w-full text-md font-medium rounded-md bg-red text-white">Signin</button>
 		<p class="text-md font-normal">Don't have an account? <a href="/signup" class="text-md font-medium">Signup</a></p>
 		{#if formError}
 			<p class="text-md font-medium">{formError}</p>

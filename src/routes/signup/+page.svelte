@@ -41,8 +41,7 @@
 			<img src="/logo.png" alt="logo" class="w-7 h-7 mb-5">
 		</a>
 
-		<h3 class="text-xl font-bold pb-1">Signup</h3>
-		<p class="text-sm font-normal pb-5">to register to Cure Me</p>
+		<h3 class="text-xl font-bold pb-5">Signup</h3>
 
 		<label for="name" class="text-sm font-normal pb-2.5">Name</label>
 		<input type="text" id="name" name="name" required class="focus:outline-none p-2 mb-5 w-full text-sm font-normal rounded-md border border-gray" />
@@ -60,7 +59,7 @@
 			class="focus:outline-none p-2 mb-5 w-full text-sm font-normal rounded-md border border-gray"
 		/>
 		<button type="submit" class="p-2 mb-5 w-full text-md font-medium rounded-md bg-red text-white">Signup</button>
-		<p class="text-md font-normal">Already have an account? <a href="/login" class="text-md font-medium">Login</a></p>
+		<p class="text-md font-normal">Already have an account? <a href="/signin" class="text-md font-medium">Signin</a></p>
 		{#if formError}
 			<p class="text-md font-medium">{formError}</p>
 		{/if}
